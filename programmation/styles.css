@@ -1,0 +1,150 @@
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- ARTISTES PAGE -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+
+/* Line up animation variable */
+
+:root {
+
+    --line-up-end-percentage-go-right: -100%;
+    --line-up-animation-duration-go-right: 5s;
+    --line-up-end-percentage-go-left: -100%;
+    --line-up-animation-duration-go-left: 5s;
+
+}
+
+/* Line up  */ 
+@keyframes lineUpGoLeft {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(var(--line-up-end-percentage-go-left)); }
+}
+
+@keyframes lineUpGoRight {
+    0% { transform: translateX(var(--line-up-end-percentage-go-right)); }
+    100% { transform: translateX(100%); }
+}
+
+.line-up{
+
+    font-family: 'Passion One', sans-serif;
+
+    font-weight: 900;
+    white-space: nowrap; /* Prevent text from wrapping */
+    color: #0C1E8A;
+    font-size: 60px;
+    padding: 10;
+}
+.line-up-go-right {
+    animation: lineUpGoRight var(--line-up-animation-duration-go-right) linear infinite;
+}
+.line-up-go-left {
+    animation: lineUpGoLeft var(--line-up-animation-duration-go-left) linear infinite;
+}
+
+
+
+/* Artistes */
+.artistes{
+    overflow: hidden;
+
+}
+
+/* Artiste */
+
+
+.artiste{
+    display: flex; /* Use flexbox layout */
+    justify-content: space-around; /* Center the image horizontally */
+    align-items: center; 
+    margin-bottom: 10px;
+    align-items: flex-start;
+}
+
+/* Image part */ 
+.artiste > .image-container {
+    flex: 1; 
+    padding: 5px; 
+    align-content: center;
+}
+.artiste > .image-container >  img {
+    width: 100%; 
+}
+
+
+/* Info part */
+
+.info-part{
+    font-family: 'Passion One', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    margin-top: 20px;
+    align-items: start;
+    flex: 0.8; 
+}
+/* Nom artiste */
+.nom-artiste{
+    position: relative; /* Ensure the container is positioned relative to its content */
+    display: inline-block; /* Display the container as an inline block */
+}
+.nom-artiste > div{
+    position: absolute; /* Position the text absolutely within the container */
+    top: 50%; /* Position the text vertically centered */
+    transform: translate(0, -50%); /* Center the text perfectly */
+    color: #0C1E8A; /* Text color */
+    font-family: 'Passion One', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+/* RSN logos */
+.artiste > .info-part > .logos{
+    display: flex;
+}
+.artiste > .info-part > .logos > img{
+    width: 30px;
+}
+.texte-artiste{
+    color: white;
+}
+
+
+/* Artiste on picture on left */
+
+.artiste-left > .info-part {
+    margin-right: 20px;
+    margin-left: 5px;
+    text-align: left;
+    
+}
+
+.artiste-left > .info-part > .nom-artiste{
+    margin-left: -50px ;
+}
+
+.artiste-left > .info-part > .nom-artiste > div {
+    right: 10px;
+}
+
+.artiste-left > .info-part > .texte-artiste{
+    text-align: left;
+}
+/* Artiste on picture right */
+
+.artiste-right > .info-part {
+    margin-right: 5px;
+    margin-left: 20px;
+    text-align: right;
+
+}
+
+.artiste-right > .info-part > .nom-artiste{
+    margin-right: -50px ;
+}
+.artiste-right > .info-part > .texte-artiste{
+    text-align: right;
+}
+
+.artiste-right > .info-part > .nom-artiste > div {
+    left: 10px;
+}
