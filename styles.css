@@ -1,134 +1,46 @@
-/* -- TYPO -- */
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@200;400;900&display=swap');
-/* GLOBAL */
-
-/* -*-*-*-*-*-*-*-*-*-*-*-*-*-*- HEADER -*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
-
-header >.overflow-container {
-    color: #3536AE;
-    font-family: 'Passion One', sans-serif;
-    font-size: 23px;
-    font-weight: 900;
-    font-size: 23px;
-    white-space: nowrap; /* Prevent text from wrapping */
-    animation: headerGoLeft var(--header-animation-duration) linear infinite;
-}
-
-header{
-    background-color: #FB32A1;
-    overflow: hidden; 
-    
-}
-
-.logo_header{
-    width: 100px; /* Set the width of the image */
-
-}
-.menu_logo_header{
-    width: 40px; /* Set the width of the image */
-}
-
-.menu{
-     display: flex; /* Use flexbox layout */
-    justify-content: space-around; /* Center the image horizontally */
-    align-items: center; 
-}
-
-@keyframes headerGoLeft {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(var(--hearer-end-percentage)); }
-}
 
 
-/* Animation variables */
 :root {
-    /* Header animation variable*/
-    --hearer-end-percentage: -100%;
-    --header-animation-duration: 5s;
+    --blue-background: #132FCE;
 
 
 }
-/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- FOOTER -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-
-@keyframes rsnGoRight {
-    0% { transform: translateX(var(--footer-rsn-percentage)); }
-    100% { transform: translateX(100%); }
-}
-:root {
-
-    --footer-rsn-percentage: -100%;
-    --footer-rsn-duration: 5s;
-
-}
-
-footer {
-    position: relative;
-    overflow-x: hidden;
-    background-color: #FB32A1;
-
-}
-
-footer > .upper-space{
-    height: 40px;
-    background-color: #132FCE ;
-}
-
-footer > .rsn-text {
-    margin-top: -30px;
-    font-family: 'Passion One', sans-serif;
-    font-weight: 900;
-    white-space: nowrap; /* Prevent text from wrapping */
-    color: #0C1E8A;
-    font-size: 60px;
-    padding: 10;
-    animation: rsnGoRight var(--footer-rsn-duration) linear infinite;
-}
-
-footer > .logos-rsn > a > img {
-    width: 50px;
-}
-
-footer > .logoOndees {
-    width: 100px;
-}
 
 
-/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- BODY -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-body {
-    padding: 0;
-    margin: 0;
-    background-color: #132FCE;
-    text-align: center;
-    font-family: 'Passion One', sans-serif;
-    color: white;
-    font-weight: 400;
-    
-}
 
-a{
-    color: white;
-    text-decoration: none ;
-}
-
-/* main components */ 
-
-.button-part{
+.banniere {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.cta{
-    padding: 5px;
-    padding-right: 40px;
-    padding-left: 40px;
-    border-radius: 15px;
-    color: white;
-    background-color: #FB32A1;
-    font-family: 'Passion One', sans-serif;
-    font-weight: 500;
-    font-size: 8vw;
-    margin: 20px;
-    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.3); 
-    border: none;
+.image-wrapper {
+    position: relative;
+    width: 100%;
 }
 
+.image-wrapper img {
+    width: 100%;
+    height: auto; /* Pour conserver les proportions de l'image */
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container button {
+    margin: 10px;
+    white-space: nowrap;
+    background-color:     var(--blue-background);
+    opacity: 80%;
+  
+    font-size: 3vh;
+
+
+}
