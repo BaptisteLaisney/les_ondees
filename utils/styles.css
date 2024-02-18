@@ -132,3 +132,11 @@ a{
     border: none;
 }
 
+.title-moving{
+    font-family: 'Passion One', sans-serif;
+    font-weight: 900;
+    white-space: nowrap; /* Prevent text from wrapping */
+    color: #0C1E8A;
+    font-size: 60px;
+    padding: 10;
+}

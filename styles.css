@@ -3,15 +3,15 @@
 :root {
     --blue-background: #132FCE;
 
-
+    --blue-title: #0C1E8A;
 }
-
-
 
 .banniere {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .image-wrapper {
@@ -39,8 +39,60 @@
     white-space: nowrap;
     background-color:     var(--blue-background);
     opacity: 80%;
-  
     font-size: 3vh;
 
 
+}
+
+.banniere >.title-baner-go-right {
+    color: white;
+    white-space: nowrap;
+    font-size: 30px;
+    font-weight: 500;
+
+    animation: titleBannerGoRight var(--title-banner-animation-duration-go-right) linear infinite;
+}
+
+@keyframes titleBannerGoRight {
+    0% { transform: translateX(var(--title-banner-end-percentage)); }
+    100% { transform: translateX(100%); }
+}
+
+
+/* Animation variables */
+:root {
+    --title-banner-end-percentage: -100%;
+    --title-banner-animation-duration-go-right: 5s;
+}
+
+.after-movie {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+
+}
+
+.foreground-video {
+    position: absolute;
+    top: 7vh;
+
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+
+    z-index: 1;
+}
+
+.content {
+    left: -50px;
+    font-size: 16vw;
+    font-weight: 900;
+    color: var(--blue-title);
+    padding: 0px;
+    margin: 0px;
+    line-height: 0.8;
+}
+.content > .line {
+    white-space: nowrap;
 }
