@@ -68,7 +68,7 @@
 .after-movie {
     position: relative;
     width: 100%;
-    height: 100vh; 
+    height: 70vh; 
     overflow: hidden;
 
 }
@@ -95,4 +95,49 @@
 }
 .content > .line {
     white-space: nowrap;
+}
+
+.affiche-part{
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+.affiche-part > img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.affiche-part > .affiche {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+@keyframes titleGoLeft {
+    0% { transform:  translateX(100%) ;}
+    100% {  transform: translateX(var(--title-after-end-percentage)) ;}
+}
+
+
+:root {
+    --title-after-end-percentage: -100%;
+    --title-after-animation-duration-go-left: 5s;
+}
+
+
+.title-container> .title-go-left {
+    color: white;
+    white-space: nowrap;
+    font-size: 30px;
+    font-weight: 500;
+    animation: titleGoLeft var(--title-after-animation-duration-go-left) linear infinite;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.title-container {
+    overflow: hidden;
 }
